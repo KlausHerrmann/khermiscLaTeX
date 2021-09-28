@@ -1,0 +1,201 @@
+<?xml version = "1.0"?>
+<KHSymbolList>
+
+<!-- BOLD -->
+<bold>
+	<symbol formula="\bA" eng="bold A" fra="" index="FALSE"/>
+	<symbol formula="\bB" eng="bold B" fra="" index="FALSE"/>
+</bold>
+	
+<!-- CALLIGRAPHY -->
+<cal>
+	<symbol formula="\calA" eng="calligraphy A" fra="" index="FALSE"/>
+	<symbol formula="\calB" eng="calligraphy B" fra="" index="FALSE"/>
+	<symbol formula="\calC" eng="calligraphy C" fra="" index="FALSE"/>
+	<symbol formula="\calD" eng="calligraphy D" fra="" index="FALSE"/>
+	<symbol formula="\calE" eng="calligraphy E" fra="" index="FALSE"/>
+	<symbol formula="\calF" eng="calligraphy F" fra="" index="FALSE"/>
+	<symbol formula="\calG" eng="calligraphy G" fra="" index="FALSE"/>
+	<symbol formula="\calH" eng="calligraphy H" fra="" index="FALSE"/>
+	<symbol formula="\calI" eng="calligraphy I" fra="" index="FALSE"/>
+	<symbol formula="\calJ" eng="calligraphy J" fra="" index="FALSE"/>
+	<symbol formula="\calK" eng="calligraphy K" fra="" index="FALSE"/>
+	<symbol formula="\calL" eng="calligraphy L" fra="" index="FALSE"/>
+	<symbol formula="\calM" eng="calligraphy M" fra="" index="FALSE"/>
+	<symbol formula="\calN" eng="calligraphy N" fra="" index="FALSE"/>
+	<symbol formula="\calO" eng="calligraphy O" fra="" index="FALSE"/>
+	<symbol formula="\calP" eng="calligraphy P" fra="" index="FALSE"/>
+	<symbol formula="\calQ" eng="calligraphy Q" fra="" index="FALSE"/>
+	<symbol formula="\calR" eng="calligraphy R" fra="" index="FALSE"/>
+	<symbol formula="\calS" eng="calligraphy S" fra="" index="FALSE"/>
+	<symbol formula="\calT" eng="calligraphy T" fra="" index="FALSE"/>
+	<symbol formula="\calU" eng="calligraphy U" fra="" index="FALSE"/>
+	<symbol formula="\calV" eng="calligraphy V" fra="" index="FALSE"/>
+	<symbol formula="\calW" eng="calligraphy W" fra="" index="FALSE"/>
+	<symbol formula="\calX" eng="calligraphy X" fra="" index="FALSE"/>
+	<symbol formula="\calY" eng="calligraphy Y" fra="" index="FALSE"/>
+	<symbol formula="\calZ" eng="calligraphy Z" fra="" index="FALSE"/>
+
+	<symbol formula="\cala" eng="calligraphy a" fra="" index="FALSE"/>
+	<symbol formula="\calb" eng="calligraphy b" fra="" index="FALSE"/>
+	<symbol formula="\calc" eng="calligraphy c" fra="" index="FALSE"/>
+	<symbol formula="\cald" eng="calligraphy d" fra="" index="FALSE"/>
+	<symbol formula="\cale" eng="calligraphy e" fra="" index="FALSE"/>
+	<symbol formula="\calf" eng="calligraphy f" fra="" index="FALSE"/>
+	<symbol formula="\calg" eng="calligraphy g" fra="" index="FALSE"/>
+	<symbol formula="\calh" eng="calligraphy h" fra="" index="FALSE"/>
+	<symbol formula="\cali" eng="calligraphy i" fra="" index="FALSE"/>
+	<symbol formula="\calj" eng="calligraphy j" fra="" index="FALSE"/>
+	<symbol formula="\calk" eng="calligraphy k" fra="" index="FALSE"/>
+	<symbol formula="\call" eng="calligraphy l" fra="" index="FALSE"/>
+	<symbol formula="\calm" eng="calligraphy m" fra="" index="FALSE"/>
+	<symbol formula="\caln" eng="calligraphy n" fra="" index="FALSE"/>
+	<symbol formula="\calo" eng="calligraphy o" fra="" index="FALSE"/>
+	<symbol formula="\calp" eng="calligraphy p" fra="" index="FALSE"/>
+	<symbol formula="\calq" eng="calligraphy q" fra="" index="FALSE"/>
+	<symbol formula="\calr" eng="calligraphy r" fra="" index="FALSE"/>
+	<symbol formula="\cals" eng="calligraphy s" fra="" index="FALSE"/>
+	<symbol formula="\calt" eng="calligraphy t" fra="" index="FALSE"/>
+	<symbol formula="\calu" eng="calligraphy u" fra="" index="FALSE"/>
+	<symbol formula="\calv" eng="calligraphy v" fra="" index="FALSE"/>
+	<symbol formula="\calw" eng="calligraphy w" fra="" index="FALSE"/>
+	<symbol formula="\calx" eng="calligraphy x" fra="" index="FALSE"/>
+	<symbol formula="\caly" eng="calligraphy y" fra="" index="FALSE"/>
+	<symbol formula="\calz" eng="calligraphy z" fra="" index="FALSE"/>
+</cal>
+	
+
+
+<!-- PROBABILITY -->
+<probability>
+	<symbol formula="X \indep Y" eng="$X$ is independent of $Y$" fra="" index="FALSE"/>
+	<symbol formula="\PSpace" eng="Probability space" fra="" index="FALSE"/>
+	<symbol formula="\SigAlgF" eng="Sigma algebra based on letter F" fra="" index="FALSE"/>
+	<symbol formula="X_n \indist X" eng="$X_n$ converges to $X$ in distribution" fra="" index="FALSE"/>
+	<symbol formula="X_n \as X" eng="$X_n$ converges to $X$ almost surly" fra="" index="FALSE"/>
+	<symbol formula="X_n \ps X" eng="$X_n$ converges to $X$ presque sûrement" fra="" index="FALSE"/>
+	<symbol formula="X_n \inLp{p} X" eng="$X_n$ converges to $X$ in $L^p$" fra="" index="FALSE"/>
+	<symbol formula="X_n \inprob X" eng="$X_n$ converges to $X$ in probability" fra="" index="FALSE"/>
+	<symbol formula="X \eqindist Y" eng="$X$ is equal to $Y$ in distribution" fra="" index="FALSE"/>
+	<symbol formula="X \eqas Y" eng="$X$ is equal to $Y$ almost surly" fra="" index="FALSE"/>
+	<symbol formula="X \neqas Y" eng="$X$ is not equal to $Y$ almost surly" fra="" index="FALSE"/>
+	<symbol formula="X \eqps Y" eng="$X$ is equal to $Y$ presque sûrement" fra="" index="FALSE"/>
+	<symbol formula="X \neqps Y" eng="$X$ is not equal to $Y$ presque sûrement" fra="" index="FALSE"/>
+	<symbol formula="\landauAS" eng="little oh almost surly" fra="" index="FALSE"/>
+	<symbol formula="\LandauAS" eng="big oh almost surly" fra="" index="FALSE"/>
+	<symbol formula="\landauP" eng="little oh in probability" fra="" index="FALSE"/>
+	<symbol formula="\LandauP" eng="big oh in probability" fra="" index="FALSE"/>
+
+	<symbol formula="\cov" eng="covariance operator" fra="" index="FALSE"/>
+	<symbol formula="\cov{X}" eng="covariance of $X$" fra="" index="FALSE"/>
+	<symbol formula="\cov{X}{Y}" eng="covariance of $X$ and $Y$" fra="" index="FALSE"/>
+	<symbol formula="\corr" eng="correlation operator" fra="" index="FALSE"/>
+	<symbol formula="\corr{X}" eng="correlation of $X$" fra="" index="FALSE"/>
+	<symbol formula="\corr{X}{Y}" eng="correlation of $X$ and $Y$" fra="" index="FALSE"/>
+	<symbol formula="\var" eng="variance operator" fra="" index="FALSE"/>
+	<symbol formula="\var{X}" eng="variance of $X$" fra="" index="FALSE"/>
+	<symbol formula="\sd" eng="standard deviation operator" fra="" index="FALSE"/>
+	<symbol formula="\sd{X}" eng="standard deviation of $X$" fra="" index="FALSE"/>
+	<symbol formula="\Prob" eng="probability measure" fra="" index="FALSE"/>
+	<symbol formula="\Prob{A}" eng="probability measure of event $A$" fra="" index="FALSE"/>
+	<symbol formula="\Prob{}{X}" eng="probability measure of $X$" fra="" index="FALSE"/>
+	<symbol formula="\Prob{A}{X}" eng="probability measure of $X$ for event $A$" fra="" index="FALSE"/>
+
+	<symbol formula="\Exp" eng="expectation operator" fra="" index="FALSE"/>
+	<symbol formula="\Exp{X}" eng="expectation of $X$" fra="" index="FALSE"/>
+	<symbol formula="\Exp{}{F}" eng="expectation with respect to $F$" fra="" index="FALSE"/>
+	<symbol formula="\Exp{X}{F}" eng="expectation of $X$ with respect to $F$" fra="" index="FALSE"/>
+
+	<symbol formula="\median" eng="median operator" fra="" index="FALSE"/>
+	<symbol formula="\median{X}" eng="median of $X$" fra="" index="FALSE"/>
+
+
+
+
+
+
+</probability>
+
+
+
+
+<!-- GENERAL -->
+<general>
+	<symbol formula="a \ldef b" eng="left hand side definition: $a$ is defined by $b$" fra="" index="FALSE"/>
+	<symbol formula="a \rdef b" eng="right hand side definition: $b$ is defined by $a$" fra="" index="FALSE"/>
+</general>
+
+<!-- LAWS -->
+<laws>
+	<symbol formula="\lunif" eng="law of the uniform distribution" fra="loi uniforme" index="TRUE"/>
+	<symbol formula="\lnorm" eng="law of the normal distribution" fra="loi normale" index="TRUE"/>
+	<symbol formula="\lpois" eng="law of the Poisson distribution" fra="loi de Poisson" index="TRUE"/>
+	<symbol formula="\lbin" eng="law of the binomial distribution" fra="loi binomiale" index="TRUE"/>
+	<symbol formula="\lexp" eng="law of the exponential distribution" fra="loi exponentielle" index="TRUE"/>
+	<symbol formula="\lber" eng="law of the Bernoulli distribution" fra="loi Bernoulli" index="TRUE"/>
+	<symbol formula="\lt" eng="law of the student t distribution" fra="loi student t" index="TRUE"/>
+</laws>
+
+<!-- SETS -->
+<sets>
+	<symbol formula="\N" eng="natural numbers" fra="nombres naturelles" index="TRUE"/>
+	<symbol formula="\Z" eng="integers" fra="nombres entiers" index="TRUE"/>
+	<symbol formula="\Q" eng="rational numbers" fra="nombres rationelles" index="TRUE"/>
+	<symbol formula="\R" eng="real numbers" fra="nombres réels" index="TRUE"/>
+	<symbol formula="\Rbar" eng="extended real numbers" fra="nombres réels" index="FALSE"/>
+	<symbol formula="\C" eng="complex numbers" fra="nombres complexes" index="FALSE"/>
+	<symbol formula="\PowerSet(E)" eng="power set of $E$" fra="ensemble des parties de $E$" index="TRUE"/>
+</sets>
+
+<!-- MEASURE THEORY  -->
+<measure>
+	<symbol formula="\Dynkin" eng="Dynkin system" fra="systeme Dynkin" index="FALSE"/>
+	<symbol formula="\Topology" eng="topology" fra="topologie" index="FALSE"/>
+	<symbol formula="\Borel(\R)" eng="Borel sigma algebra" fra="tribu Borellienne sur $\R$" index="TRUE"/>
+	<symbol formula="\leb" eng="Lebesgue measure" fra="mesure du Lebesgue" index="TRUE"/>
+	<symbol formula="\pfm{\mu}{f}" eng="push forward measure of $\mu$ under $f$" fra="" index="FALSE"/>
+	<symbol formula="\metric{}{}{}" eng="metric symbol" fra="" index="FALSE"/>
+	<symbol formula="\metric{}{}{X}" eng="metric on $X$" fra="metrique sur $A$" index="TRUE"/>
+	<symbol formula="\metric{x}{y}{X}" eng="metric on $X$ of $x$ and $y$" fra="" index="FALSE"/>
+	<symbol formula="\metric{x}{y}" eng="metric of $x$ and $y$" fra="" index="FALSE"/>
+</measure>
+
+<!-- COMPLEX NUMBERS  -->
+<complex>
+	<symbol formula="\iu" eng="imaginary unit" fra="" index="FALSE"/>
+	<symbol formula="\re" eng="real part of imaginary number" fra="" index="FALSE"/>
+	<symbol formula="\re{z}" eng="real part of imaginary number $z$" fra="" index="FALSE"/>
+	<symbol formula="\im" eng="imaginary part of imaginary number" fra="" index="FALSE"/>
+	<symbol formula="\im{z}" eng="imaginary part of imaginary number $z$" fra="" index="FALSE"/>
+</complex>
+
+<!-- REAL ANALYSIS  -->
+<real>
+	<symbol formula="\e" eng="Euler's number" fra="" index="FALSE"/>
+	<symbol formula="\argmin" eng="arg min" fra="" index="FALSE"/>
+	<symbol formula="\argmax" eng="arg max" fra="" index="FALSE"/>
+	<symbol formula="\abs{x}" eng="absolute value of $x$" fra="" index="FALSE"/>
+	<symbol formula="\d" eng="straight differential for integrals and derivatives" fra="" index="FALSE"/>
+	<symbol formula="\norm{x}" eng="norm of $x$" fra="" index="FALSE"/>
+	<symbol formula="\norm{x}{L^2}" eng="norm of $x$ with subscript" fra="" index="FALSE"/>
+	<symbol formula="\vol" eng="volume operator" fra="" index="FALSE"/>
+	<symbol formula="\vol{A}" eng="volume of $A$" fra="" index="FALSE"/>
+	<symbol formula="\ind{A}" eng="indicator function of set $A$" fra="" index="FALSE"/>
+	<symbol formula="\ind{A}{x}" eng="indicator function of $A$ evaluated at $x\in\R$" fra="" index="FALSE"/>
+	<symbol formula="\floor{x}" eng="largest integer smaller than $x$" fra="" index="FALSE"/>
+	<symbol formula="\ceil{x}" eng="smallest integer larger than $x$" fra="" index="FALSE"/>
+	<symbol formula="\sinc" eng="$\sinc$ function $\sinc(x)=\sin(x)/x$" fra="" index="FALSE"/>
+	<symbol formula="\landau" eng="small oh" fra="" index="FALSE"/>
+	<symbol formula="\Landau" eng="big oh" fra="" index="FALSE"/>
+</real>
+</KHSymbolList>
+
+<!--
+<symbol formula="" eng="" fra="" index="TRUE"/>
+
+
+<symbol formula="\metric{x}{y}{p}" eng="" fra="" index="TRUE"/>
+
+-->
+
+

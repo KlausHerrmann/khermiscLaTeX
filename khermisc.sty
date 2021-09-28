@@ -1,0 +1,398 @@
+
+%https://tex.stackexchange.com/questions/1137/where-do-i-place-my-own-sty-or-cls-files-to-make-them-available-to-all-my-te
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{khermisc}[2021/08/27 khermisc package]
+
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{bm}
+\RequirePackage{calligra}
+\RequirePackage{mathrsfs} %for mathscr italics (Dynkin system etc)
+\RequirePackage{dsfont} %for the indicator function
+
+%https://tex.stackexchange.com/questions/13641/define-same-command-with-different-amount-of-parameters
+%https://tex.stackexchange.com/questions/63223/xparse-empty-arguments/63233#63233
+\RequirePackage{xparse}
+
+%This allows to use optional arguments in latex \def type definitions
+\ExplSyntaxOn
+\DeclareExpandableDocumentCommand{\IfNoValueOrEmptyTF}{mmm}
+ {
+  \IfNoValueTF{#1}{#2}
+   {
+    \tl_if_empty:nTF {#1} {#2} {#3}
+   }
+ }
+\ExplSyntaxOff
+
+
+%definition signs := and =:
+%\newcommand{\rdef}{\mathrel{\resizebox{\widthof{$\mathord{=}$}}{\height}{ $\!\!=\!\!\resizebox{1.2\width}{0.8\height}{\raisebox{0.23ex}{$\mathop{:}$}}\!\!$ }}}
+%\newcommand{\ldef}{\mathrel{\resizebox{\widthof{$\mathord{=}$}}{\height}{ $\!\!\resizebox{1.2\width}{0.8\height}{\raisebox{0.23ex}{$\mathop{:}$}}\!\!=\!\!$ }}}
+\newcommand{\rdef}{=:}
+\newcommand{\ldef}{:=}
+
+%\DeclareOption{}{}
+\DeclareOption{laws}{
+
+	%R style definition of laws
+	\DeclareMathOperator\lnorm{\mathcal{N}}
+	\DeclareMathOperator\lpois{Pois}
+	\DeclareMathOperator\lbin{Binom}
+	\DeclareMathOperator\lunif{Unif}
+	\DeclareMathOperator\lexp{Exp}
+	\DeclareMathOperator\lber{Ber}
+	\DeclareMathOperator\lt{t}
+
+}
+
+\DeclareOption{sets}{
+	% Sets
+	\def\N{\mathbb{N}}
+	\def\Z{\mathbb{Z}}
+	\def\Q{\mathbb{Q}}
+	\def\R{\mathbb{R}}
+	\def\Rbar{\overline{\R}}
+	\def\C{\mathbb{C}}
+	\def\PowerSet{\mathcal{P}}
+}
+
+\DeclareOption{measure}{
+
+	% Measure Theory
+	\def\Dynkin{\mathscr{D}}
+	\def\Topology{\tau}
+	\def\Borel{\mathscr{B}}
+
+	\DeclareMathOperator\metricOP{d}
+	\NewDocumentCommand\metric{ggg}{%
+	\IfNoValueOrEmptyTF{#1}{
+	\IfNoValueOrEmptyTF{#3}{\metricOP}{\metricOP_{#3}}
+	}{
+	\IfNoValueOrEmptyTF{#3}{\metricOP\left(#1,\,#2\right)}{\metricOP_{#3}\left(#1,\,#2\right)}
+	}
+	}
+
+	\def\leb{\lambda}
+	\newcommand{\pfm}[2]{#2_{\sharp}#1} %push forward measure
+
+}
+
+\DeclareOption{prob}{
+
+	% Probability
+
+	% independence symbol: https://tex.stackexchange.com/questions/79434/double-perpendicular-symbol-for-independence
+	\newcommand{\indep}{{\perp\!\!\!\perp}}
+
+	\def\PSpace{\Omega}
+	\def\SigAlgF{\mathscr{F}}
+
+	\def\indist{\xrightarrow{d}}
+	\def\eqindist{\stackrel{d}{=}}
+	\def\eqas{\stackrel{a.s.}{=}}
+	\def\neqas{\stackrel{a.s.}{\not=}}
+	\def\eqps{\stackrel{p.s.}{=}}
+	\def\neqps{\stackrel{p.s.}{\not=}}
+	\def\as{\xrightarrow{a.s.}}
+	\def\ps{\xrightarrow{p.s.}}
+	\newcommand{\inLp}[1]{\xrightarrow{L^{#1}}}
+	\def\inprob{\xrightarrow{\Prob}}
+
+	\def\LandauAS{\Landau_{a.s.}}
+	\def\landauAS{\landau_{a.s.}}
+	\def\LandauP{\Landau_{\Prob}}
+	\def\landauP{\landau_{\Prob}}
+
+	% covariance function
+	\DeclareMathOperator{\covOP}{cov}
+	\NewDocumentCommand\cov{gg}{%
+	\IfNoValueOrEmptyTF{#1}{
+	\IfNoValueOrEmptyTF{#2}{\covOP}{\covOP\left[#2\,,#2\right]}
+	}{
+	\IfNoValueOrEmptyTF{#2}{\covOP\left[#1\,,#1\right]}{\covOP\left[#1\,,#2\right]}
+	}
+	}
+
+	% correlation function
+	\DeclareMathOperator{\corrOP}{corr}
+	\NewDocumentCommand\corr{gg}{%
+	\IfNoValueOrEmptyTF{#1}{
+	\IfNoValueOrEmptyTF{#2}{\corrOP}{\corrOP\left[#2\,,#2\right]}
+	}{
+	\IfNoValueOrEmptyTF{#2}{\corrOP\left[#1\,,#1\right]}{\corrOP\left[#1\,,#2\right]}
+	}
+	}
+
+	% variance function
+	\DeclareMathOperator{\varOP}{var}
+	\NewDocumentCommand\var{g}{\varOP\IfNoValueOrEmptyTF{#1}{}{\left[#1\right]}}
+
+	% standard deviation
+	\DeclareMathOperator{\sdOP}{sd}
+	\NewDocumentCommand\sd{g}{\sdOP\IfNoValueOrEmptyTF{#1}{}{\left[#1\right]}}
+
+	% probability
+	\NewDocumentCommand\Prob{gg}{%
+	\IfNoValueOrEmptyTF{#1}{
+	\IfNoValueOrEmptyTF{#2}{\mathbb{P}}{\mathbb{P}_{#2}}
+	}{
+	\IfNoValueOrEmptyTF{#2}{\mathbb{P}\left(#1\right)}{\mathbb{P}_{#2}\left(#1\right)}
+	}
+	}
+
+	% expectation
+	\NewDocumentCommand\Exp{gg}{%
+	\IfNoValueOrEmptyTF{#1}{
+	\IfNoValueOrEmptyTF{#2}{\mathbb{E}}{\mathbb{E}_{#2}}
+	}{
+	\IfNoValueOrEmptyTF{#2}{\mathbb{E}\left[#1\right]}{\mathbb{E}_{#2}\left[#1\right]}
+	}
+	}
+
+	% median
+	\DeclareMathOperator{\medOP}{med}
+	\NewDocumentCommand\median{g}{%
+	\IfNoValueOrEmptyTF{#1}{\medOP
+	}{
+	\medOP\left[#1\right]
+	}}
+
+}
+
+\DeclareOption{real}{
+
+	% ANALYSIS
+	\DeclareMathOperator\e{e} 
+	\DeclareMathOperator*{\argmin}{arg\ min}
+	\DeclareMathOperator*{\argmax}{arg\ max}
+	\newcommand{\abs}[1]{\left\vert #1 \right\vert}
+	%\newcommand{\xNorm}[2]{\left\Vert #1 \right\Vert_{#2}}
+	\def\d{\,\mathrm{d}} % d for integrals
+
+
+	% norm (the second argument is optional)
+	\NewDocumentCommand\norm{gg}{%
+	\IfNoValueOrEmptyTF{#2}{\left\Vert #1 \right\Vert}
+	{\left\Vert #1 \right\Vert_{#2}}
+	}
+
+	% indicator (the second argument is optional) %\newcommand{\ind}[1]{\mathds{1}_{#1}}
+	\NewDocumentCommand\ind{gg}{%
+	\IfNoValueOrEmptyTF{#2}{\mathds{1}_{#1}}
+	{\mathds{1}_{#1}\left(#2\right)}
+	}
+
+	% volume of set
+	\DeclareMathOperator{\volOP}{vol} 
+	\NewDocumentCommand\vol{g}{%
+	\IfNoValueOrEmptyTF{#1}{\volOP}
+	{\volOP\left(#1\right)}
+	}
+
+	%https://tex.stackexchange.com/questions/118173/how-to-write-ceil-and-floor-in-latex
+	\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+	\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+	\DeclareMathOperator{\sinc}{sinc}
+
+	\def\Landau{\mathcal{O}}
+	\def\landau{o}
+
+}
+
+\DeclareOption{complex}{
+	
+	% imaginary number
+	\newcommand{\iu}{\mathrm{i}\mkern1mu} %\newcommand{\iu}{{i\mkern1mu}}
+
+	% imaginary part function
+	\DeclareMathOperator{\imOP}{Im} %\DeclareMathOperator{\imOP}{\operatorname{\mathfrak{Im}}}
+	\NewDocumentCommand\im{g}{%
+	\IfNoValueOrEmptyTF{#1}{\imOP}
+	{\imOP\left(#1\right)}
+	}
+
+	% real part function
+	\DeclareMathOperator{\reOP}{Re} %\DeclareMathOperator{\reOP}{\operatorname{\mathfrak{Re}}}
+	\NewDocumentCommand\re{g}{%
+	\IfNoValueOrEmptyTF{#1}{\reOP}
+	{\reOP\left(#1\right)}
+	}
+
+}
+
+\DeclareOption{bold}{
+
+	%\usepackage{bm} %for bold letters and greek symbols
+	\newcommand*{\mybf}[1]{\bm{#1}}
+
+	%LATIN: attention for m and f we have a special command \bbm \bbf
+	\def\bA{\mybf{A}}
+	\def\bB{\mybf{B}}
+	\def\bC{\mybf{C}}
+	\def\bD{\mybf{D}}
+	\def\bE{\mybf{E}}
+	\def\bF{\mybf{F}}
+	\def\bG{\mybf{G}}
+	\def\bH{\mybf{H}}
+	\def\bI{\mybf{I}}
+	\def\bJ{\mybf{J}}
+	\def\bK{\mybf{K}}
+	\def\bL{\mybf{L}}
+	\def\bM{\mybf{M}}
+	\def\bN{\mybf{N}}
+	\def\bO{\mybf{O}}
+	\def\bP{\mybf{P}}
+	\def\bQ{\mybf{Q}}
+	\def\bR{\mybf{R}}
+	\def\bS{\mybf{S}}
+	\def\bT{\mybf{T}}
+	\def\bU{\mybf{U}}
+	\def\bV{\mybf{V}}
+	\def\bW{\mybf{W}}
+	\def\bX{\mybf{X}}
+	\def\bY{\mybf{Y}}
+	\def\bZ{\mybf{Z}}
+
+	\def\ba{\mybf{a}}
+	\def\bb{\mybf{b}}
+	\def\bc{\mybf{c}}
+	\def\bd{\mybf{d}}
+	\def\be{\mybf{e}}
+	\def\bbf{\mybf{f}}
+	\def\bg{\mybf{g}}
+	\def\bh{\mybf{h}}
+	\def\bi{\mybf{i}}
+	\def\bj{\mybf{j}}
+	\def\bk{\mybf{k}}
+	\def\bl{\mybf{l}}
+	\def\bbm{\mybf{m}}
+	\def\bn{\mybf{n}}
+	\def\bo{\mybf{o}}
+	\def\bp{\mybf{p}}
+	\def\bq{\mybf{q}}
+	\def\br{\mybf{r}}
+	\def\bs{\mybf{s}}
+	\def\bt{\mybf{t}}
+	\def\bu{\mybf{u}}
+	\def\bv{\mybf{v}}
+	\def\bw{\mybf{w}}
+	\def\bx{\mybf{x}}
+	\def\by{\mybf{y}}
+	\def\bz{\mybf{z}}
+
+	%GREEK: attention greek bvarphi defined via \boldsymbol of amsmath
+	%for eta we use bfeta to avoid a conflict with regular beta and bbeta
+	\def\balpha{\mybf{\alpha}}
+	\def\bbeta{\mybf{\beta}}
+	\def\bgamma{\mybf{\gamma}}
+	\def\bGamma{\mybf{\Gamma}}
+	\def\bdelta{\mybf{\delta}}
+	\def\bDelta{\mybf{\Delta}}
+	\def\bepsilon{\mybf{\epsilon}}
+	\def\bvarepsilon{\mybf{\varepsilon}}
+	\def\bzeta{\mybf{\zeta}}
+	\def\bfeta{\mybf{\eta}}
+	\def\btheta{\mybf{\theta}}
+	\def\bvartheta{\mybf{\vartheta}}
+	\def\bTheta{\mybf{\Theta}}
+	\def\biota{\mybf{\iota}}
+	\def\bkappa{\mybf{\kappa}}
+	\def\blambda{\mybf{\lambda}}
+	\def\bLambda{\mybf{\Lambda}}
+	\def\bmu{\mybf{\mu}}
+	\def\bnu{\mybf{\nu}}
+	\def\bxi{\mybf{\xi}}
+	\def\bXi{\mybf{\Xi}}
+	\def\bpi{\mybf{\pi}}
+	\def\bPi{\mybf{\Pi}}
+	\def\brho{\mybf{\rho}}
+	\def\bvarrho{\mybf{\varrho}}
+	\def\bsigma{\mybf{\sigma}}
+	\def\bSigma{\mybf{\Sigma}}
+	\def\btau{\mybf{\tau}}
+	\def\bupsilon{\mybf{\upsilon}}
+	\def\bUpsilon{\mybf{\Upsilon}}
+	\def\bphi{\mybf{\phi}}
+	\def\bvarphi{{\boldsymbol\varphi}}
+	\def\bPhi{\mybf{\Phi}}
+	\def\bchi{\mybf{\chi}}
+	\def\bpsi{\mybf{\psi}}
+	\def\bPsi{\mybf{\Psi}}
+	\def\bomega{\mybf{\omega}}
+	\def\bOmega{\mybf{\Omega}}
+
+}
+
+%nice letters but too big (but for lower case letters this works but mathcal does not) => use for lower case letters only
+%https://tex.stackexchange.com/questions/131656/how-to-typeset-this-symbol-with-mathcal
+\DeclareOption{cal}{
+
+	\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+	\newcommand*{\mycalL}[1]{\mathcalligra{#1}}
+
+	\newcommand*{\mycal}[1]{\mathcal{#1}}
+
+	%LATIN
+	\def\calA{\mycal{A}}
+	\def\calB{\mycal{B}}
+	\def\calC{\mycal{C}}
+	\def\calD{\mycal{D}}
+	\def\calE{\mycal{E}}
+	\def\calF{\mycal{F}}
+	\def\calG{\mycal{G}}
+	\def\calH{\mycal{H}}
+	\def\calI{\mycal{I}}
+	\def\calJ{\mycal{J}}
+	\def\calK{\mycal{K}}
+	\def\calL{\mycal{L}}
+	\def\calM{\mycal{M}}
+	\def\calN{\mycal{N}}
+	\def\calO{\mycal{O}}
+	\def\calP{\mycal{P}}
+	\def\calQ{\mycal{Q}}
+	\def\calR{\mycal{R}}
+	\def\calS{\mycal{S}}
+	\def\calT{\mycal{T}}
+	\def\calU{\mycal{U}}
+	\def\calV{\mycal{V}}
+	\def\calW{\mycal{W}}
+	\def\calX{\mycal{X}}
+	\def\calY{\mycal{Y}}
+	\def\calZ{\mycal{Z}}
+
+	\def\cala{\mycalL{a}}
+	\def\calb{\mycalL{b}}
+	\def\calc{\mycalL{c}}
+	\def\cald{\mycalL{d}}
+	\def\cale{\mycalL{e}}
+	\def\calf{\mycalL{f}}
+	\def\calg{\mycalL{g}}
+	\def\calh{\mycalL{h}}
+	\def\cali{\mycalL{i}}
+	\def\calj{\mycalL{j}}
+	\def\calk{\mycalL{k}}
+	\def\call{\mycalL{l}}
+	\def\calm{\mycalL{m}}
+	\def\caln{\mycalL{n}}
+	\def\calo{\mycalL{o}}
+	\def\calp{\mycalL{p}}
+	\def\calq{\mycalL{q}}
+	\def\calr{\mycalL{r}}
+	\def\cals{\mycalL{s}}
+	\def\calt{\mycalL{t}}
+	\def\calu{\mycalL{u}}
+	\def\calv{\mycalL{v}}
+	\def\calw{\mycalL{w}}
+	\def\calx{\mycalL{x}}
+	\def\caly{\mycalL{y}}
+	\def\calz{\mycalL{z}}
+
+}
+
+\DeclareOption*{\PackageWarning{examplepackage}{Unknown ‘\CurrentOption’}}
+
+\ProcessOptions\relax
+
