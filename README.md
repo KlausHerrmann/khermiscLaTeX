@@ -25,17 +25,23 @@ See <a href="LatexDefinitionTable.pdf">LatexDefinitionTable.pdf</a> for a full l
 ## Package options
 The available symbols are grouped by different subjects.
 
-1. laws: Probability laws of distribution functions (normal, exponential, Bernoulli, ...)
-1. sets: Notation for sets (ℕ, ℤ, ℚ, ℝ, ℂ, ...)
-1. measure: Measure theory (Borel sigma field, Lebesgue measure, ...)
-1. prob: Probability (expectation, independence, convergence in probability, ...)
-1. real: Real analysis (Euler's number, argmin, norm, indicator function, ...)
-1. complex: Complex analysis (imaginary number, real and imaginary part, ...)
-1. bold: Bold symbols Latin and Greek
-1. cal: Calligraphic symbols Latin
+1. `laws`: Probability laws of distribution functions (normal, exponential, Bernoulli, ...)
+1. `sets`: Notation for sets (ℕ, ℤ, ℚ, ℝ, ℂ, ...)
+1. `measure`: Measure theory (Borel sigma field, Lebesgue measure, ...)
+1. `prob`: Probability (expectation, independence, convergence in probability, ...)
+1. `real`: Real analysis (Euler's number, argmin, norm, indicator function, ...)
+1. `complex`: Complex analysis (imaginary number, real and imaginary part, ...)
+1. `bold`: Bold symbols Latin and Greek
+1. `cal`: Calligraphic symbols Latin
 
 ## Installation
 Just like any other LaTeX package, the file can be included using `\usepackage{khermisc}` in the preamble with the relevant options in square brackets, for example, `\usepackage[complex]{khermisc}`.
 By default the package is loaded with all the options.
 To use the package the file has to be either in the same directory as the LaTeX file, or in a central location where the `sty` files are stored.
 
+## Contribute
+To add a new symbol one needs to
+1. define the symbol in the `sty` file, and then
+1. add an entry to the `.xml` file.
+1. Then one needs to run `createDefinitionTables.sh` to produce the LaTeX help file.
+1. Finally, this needs to be compiled and the resulting pdf needs to be added to the repository.
