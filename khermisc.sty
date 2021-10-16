@@ -2,7 +2,7 @@
 %https://tex.stackexchange.com/questions/1137/where-do-i-place-my-own-sty-or-cls-files-to-make-them-available-to-all-my-te
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{khermisc}[2021/08/27 khermisc package]
+\ProvidesPackage{khermisc}[2021/10/13 khermisc package]
 
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
@@ -393,6 +393,7 @@
 }
 
 \DeclareOption*{\PackageWarning{examplepackage}{Unknown ‘\CurrentOption’}}
-
+%enable all options by default
+\ExecuteOptions{cal,bold,complex,real,prob,measure,laws,sets}
 \ProcessOptions\relax
 
