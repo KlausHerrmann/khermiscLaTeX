@@ -5,6 +5,97 @@
 <bold>
 	<symbol formula="\bA" eng="bold A" fra="" index="FALSE"/>
 	<symbol formula="\bB" eng="bold B" fra="" index="FALSE"/>
+	<symbol formula="\bC" eng="bold C" fra="" index="FALSE"/>
+	<symbol formula="\bD" eng="bold D" fra="" index="FALSE"/>
+	<symbol formula="\bE" eng="bold E" fra="" index="FALSE"/>
+	<symbol formula="\bF" eng="bold F" fra="" index="FALSE"/>
+	<symbol formula="\bG" eng="bold G" fra="" index="FALSE"/>
+	<symbol formula="\bH" eng="bold H" fra="" index="FALSE"/>
+	<symbol formula="\bI" eng="bold I" fra="" index="FALSE"/>
+	<symbol formula="\bJ" eng="bold J" fra="" index="FALSE"/>
+	<symbol formula="\bK" eng="bold K" fra="" index="FALSE"/>
+	<symbol formula="\bL" eng="bold L" fra="" index="FALSE"/>
+	<symbol formula="\bM" eng="bold M" fra="" index="FALSE"/>
+	<symbol formula="\bN" eng="bold N" fra="" index="FALSE"/>
+	<symbol formula="\bO" eng="bold O" fra="" index="FALSE"/>
+	<symbol formula="\bP" eng="bold P" fra="" index="FALSE"/>
+	<symbol formula="\bQ" eng="bold Q" fra="" index="FALSE"/>
+	<symbol formula="\bR" eng="bold R" fra="" index="FALSE"/>
+	<symbol formula="\bS" eng="bold S" fra="" index="FALSE"/>
+	<symbol formula="\bT" eng="bold T" fra="" index="FALSE"/>
+	<symbol formula="\bU" eng="bold U" fra="" index="FALSE"/>
+	<symbol formula="\bV" eng="bold V" fra="" index="FALSE"/>
+	<symbol formula="\bW" eng="bold W" fra="" index="FALSE"/>
+	<symbol formula="\bX" eng="bold X" fra="" index="FALSE"/>
+	<symbol formula="\bY" eng="bold Y" fra="" index="FALSE"/>
+	<symbol formula="\bZ" eng="bold Z" fra="" index="FALSE"/>
+
+	<symbol formula="\ba" eng="bold a" fra="" index="FALSE"/>
+	<symbol formula="\bb" eng="bold b" fra="" index="FALSE"/>
+	<symbol formula="\bc" eng="bold c" fra="" index="FALSE"/>
+	<symbol formula="\bd" eng="bold d" fra="" index="FALSE"/>
+	<symbol formula="\be" eng="bold e" fra="" index="FALSE"/>
+	<symbol formula="\bbf" eng="bold f" fra="" index="FALSE"/>
+	<symbol formula="\bg" eng="bold g" fra="" index="FALSE"/>
+	<symbol formula="\bh" eng="bold h" fra="" index="FALSE"/>
+	<symbol formula="\bi" eng="bold i" fra="" index="FALSE"/>
+	<symbol formula="\bj" eng="bold j" fra="" index="FALSE"/>
+	<symbol formula="\bk" eng="bold k" fra="" index="FALSE"/>
+	<symbol formula="\bl" eng="bold l" fra="" index="FALSE"/>
+	<symbol formula="\bbm" eng="bold m" fra="" index="FALSE"/>
+	<symbol formula="\bn" eng="bold n" fra="" index="FALSE"/>
+	<symbol formula="\bo" eng="bold o" fra="" index="FALSE"/>
+	<symbol formula="\bp" eng="bold p" fra="" index="FALSE"/>
+	<symbol formula="\bq" eng="bold q" fra="" index="FALSE"/>
+	<symbol formula="\br" eng="bold r" fra="" index="FALSE"/>
+	<symbol formula="\bs" eng="bold s" fra="" index="FALSE"/>
+	<symbol formula="\bt" eng="bold t" fra="" index="FALSE"/>
+	<symbol formula="\bu" eng="bold u" fra="" index="FALSE"/>
+	<symbol formula="\bv" eng="bold v" fra="" index="FALSE"/>
+	<symbol formula="\bw" eng="bold w" fra="" index="FALSE"/>
+	<symbol formula="\bx" eng="bold x" fra="" index="FALSE"/>
+	<symbol formula="\by" eng="bold y" fra="" index="FALSE"/>
+	<symbol formula="\bz" eng="bold z" fra="" index="FALSE"/>
+
+	<symbol formula="\balpha" eng="bold alpha" fra="" index="FALSE"/>
+	<symbol formula="\bbeta" eng="bold beta" fra="" index="FALSE"/>
+	<symbol formula="\bgamma" eng="bold gamma" fra="" index="FALSE"/>
+	<symbol formula="\bGamma" eng="bold Gamma" fra="" index="FALSE"/>
+	<symbol formula="\bdelta" eng="bold delta" fra="" index="FALSE"/>
+	<symbol formula="\bDelta" eng="bold Delta" fra="" index="FALSE"/>
+	<symbol formula="\bepsilon" eng="bold epsilon" fra="" index="FALSE"/>
+	<symbol formula="\bvarepsilon" eng="bold varepsilon" fra="" index="FALSE"/>
+	<symbol formula="\bzeta" eng="bold zeta" fra="" index="FALSE"/>
+	<symbol formula="\bfeta" eng="bold eta" fra="" index="FALSE"/>
+	<symbol formula="\btheta" eng="bold theta" fra="" index="FALSE"/>
+	<symbol formula="\bvartheta" eng="bold vartheta" fra="" index="FALSE"/>
+	<symbol formula="\bTheta" eng="bold Theta" fra="" index="FALSE"/>
+	<symbol formula="\biota" eng="bold iota" fra="" index="FALSE"/>
+	<symbol formula="\bkappa" eng="bold kappa" fra="" index="FALSE"/>
+	<symbol formula="\blambda" eng="bold lambda" fra="" index="FALSE"/>
+	<symbol formula="\bLambda" eng="bold Lambda" fra="" index="FALSE"/>
+	<symbol formula="\bmu" eng="bold mu" fra="" index="FALSE"/>
+	<symbol formula="\bnu" eng="bold nu" fra="" index="FALSE"/>
+	<symbol formula="\bxi" eng="bold xi" fra="" index="FALSE"/>
+	<symbol formula="\bXi" eng="bold Xi" fra="" index="FALSE"/>
+	<symbol formula="\bpi" eng="bold pi" fra="" index="FALSE"/>
+	<symbol formula="\bPi" eng="bold pi" fra="" index="FALSE"/>
+	<symbol formula="\brho" eng="bold rho" fra="" index="FALSE"/>
+	<symbol formula="\bvarrho" eng="bold varrho" fra="" index="FALSE"/>
+	<symbol formula="\bsigma" eng="bold sigma" fra="" index="FALSE"/>
+	<symbol formula="\bSigma" eng="bold Sigma" fra="" index="FALSE"/>
+	<symbol formula="\btau" eng="bold tau" fra="" index="FALSE"/>
+	<symbol formula="\bupsilon" eng="bold upsilon" fra="" index="FALSE"/>
+	<symbol formula="\bUpsilon" eng="bold Upsilon" fra="" index="FALSE"/>
+	<symbol formula="\bphi" eng="bold phi" fra="" index="FALSE"/>
+	<symbol formula="\bvarphi" eng="bold varphi" fra="" index="FALSE"/>
+	<symbol formula="\bPhi" eng="bold Phi" fra="" index="FALSE"/>
+	<symbol formula="\bchi" eng="bold chi" fra="" index="FALSE"/>
+	<symbol formula="\bpsi" eng="bold psi" fra="" index="FALSE"/>
+	<symbol formula="\bPsi" eng="bold Psi" fra="" index="FALSE"/>
+	<symbol formula="\bomega" eng="bold omega" fra="" index="FALSE"/>
+	<symbol formula="\bOmega" eng="bold Omega" fra="" index="FALSE"/>
+
 </bold>
 	
 <!-- CALLIGRAPHY -->

@@ -3,7 +3,7 @@ A LaTeX package that provides commands for frequently used symbols in mathematic
 The package has two main features:
 
 1. It provides an accessible interface for commonly used symbols, and most importantly
-1. it uses the xparse package to provide overloaded versions of commonly used functions.
+1. it uses the `xparse` package to provide overloaded versions of commonly used functions.
 
 Using overloaded functions leads to a simplified and intuitive syntax.
 For example, considering the probability of an event there are a number of frequently used notations:
@@ -26,7 +26,7 @@ See <a href="LatexDefinitionTable.pdf">LatexDefinitionTable.pdf</a> for a full l
 The available symbols are grouped by different subjects.
 
 1. laws: Probability laws of distribution functions (normal, exponential, Bernoulli, ...)
-1. sets: Notation for sets (N, Z, Q, R, ...)
+1. sets: Notation for sets (ℕ, ℤ, ℚ, ℝ, ℂ, ...)
 1. measure: Measure theory (Borel sigma field, Lebesgue measure, ...)
 1. prob: Probability (expectation, independence, convergence in probability, ...)
 1. real: Real analysis (Euler's number, argmin, norm, indicator function, ...)
