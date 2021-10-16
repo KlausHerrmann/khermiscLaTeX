@@ -42,6 +42,6 @@ To use the package the file has to be either in the same directory as the LaTeX 
 ## Contribute
 To add a new symbol one needs to
 1. define the symbol in the `sty` file, and then
-1. add an entry to the `.xml` file.
-1. Then one needs to run `createDefinitionTables.sh` to produce the LaTeX help file.
-1. Finally, this needs to be compiled and the resulting pdf needs to be added to the repository.
+1. add an entry to the `khermisc_symbolList.xml` file.
+1. Then one needs to run `createDefinitionTables.sh` to produce the LaTeX `LatexDefinitionTable.tex` file.
+1. Finally, this needs to be compiled and the resulting `LatexDefinitionTable.pdf` needs to be added to the repository.

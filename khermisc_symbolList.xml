@@ -163,19 +163,19 @@
 	<symbol formula="\PSpace" eng="Probability space" fra="" index="FALSE"/>
 	<symbol formula="\SigAlgF" eng="Sigma algebra based on letter F" fra="" index="FALSE"/>
 	<symbol formula="X_n \indist X" eng="$X_n$ converges to $X$ in distribution" fra="" index="FALSE"/>
-	<symbol formula="X_n \as X" eng="$X_n$ converges to $X$ almost surly" fra="" index="FALSE"/>
+	<symbol formula="X_n \as X" eng="$X_n$ converges to $X$ almost surely" fra="" index="FALSE"/>
 	<symbol formula="X_n \ps X" eng="$X_n$ converges to $X$ presque sûrement" fra="" index="FALSE"/>
 	<symbol formula="X_n \inLp{p} X" eng="$X_n$ converges to $X$ in $L^p$" fra="" index="FALSE"/>
 	<symbol formula="X_n \inprob X" eng="$X_n$ converges to $X$ in probability" fra="" index="FALSE"/>
 	<symbol formula="X \eqindist Y" eng="$X$ is equal to $Y$ in distribution" fra="" index="FALSE"/>
-	<symbol formula="X \eqas Y" eng="$X$ is equal to $Y$ almost surly" fra="" index="FALSE"/>
-	<symbol formula="X \neqas Y" eng="$X$ is not equal to $Y$ almost surly" fra="" index="FALSE"/>
+	<symbol formula="X \eqas Y" eng="$X$ is equal to $Y$ almost surely" fra="" index="FALSE"/>
+	<symbol formula="X \neqas Y" eng="$X$ is not equal to $Y$ almost surely" fra="" index="FALSE"/>
 	<symbol formula="X \eqps Y" eng="$X$ is equal to $Y$ presque sûrement" fra="" index="FALSE"/>
 	<symbol formula="X \neqps Y" eng="$X$ is not equal to $Y$ presque sûrement" fra="" index="FALSE"/>
-	<symbol formula="\landauAS" eng="little oh almost surly" fra="" index="FALSE"/>
-	<symbol formula="\LandauAS" eng="big oh almost surly" fra="" index="FALSE"/>
-	<symbol formula="\landauP" eng="little oh in probability" fra="" index="FALSE"/>
-	<symbol formula="\LandauP" eng="big oh in probability" fra="" index="FALSE"/>
+	<symbol formula="\landauAS" eng="little o almost surely" fra="" index="FALSE"/>
+	<symbol formula="\LandauAS" eng="big O almost surely" fra="" index="FALSE"/>
+	<symbol formula="\landauP" eng="little o in probability" fra="" index="FALSE"/>
+	<symbol formula="\LandauP" eng="big O in probability" fra="" index="FALSE"/>
 
 	<symbol formula="\cov" eng="covariance operator" fra="" index="FALSE"/>
 	<symbol formula="\cov{X}" eng="covariance of $X$" fra="" index="FALSE"/>
@@ -276,8 +276,8 @@
 	<symbol formula="\floor{x}" eng="largest integer smaller than $x$" fra="" index="FALSE"/>
 	<symbol formula="\ceil{x}" eng="smallest integer larger than $x$" fra="" index="FALSE"/>
 	<symbol formula="\sinc" eng="$\sinc$ function $\sinc(x)=\sin(x)/x$" fra="" index="FALSE"/>
-	<symbol formula="\landau" eng="small oh" fra="" index="FALSE"/>
-	<symbol formula="\Landau" eng="big oh" fra="" index="FALSE"/>
+	<symbol formula="\landau" eng="small o" fra="" index="FALSE"/>
+	<symbol formula="\Landau" eng="big O" fra="" index="FALSE"/>
 </real>
 </KHSymbolList>
 
