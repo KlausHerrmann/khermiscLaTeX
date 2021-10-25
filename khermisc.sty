@@ -66,7 +66,7 @@
 	\def\Borel{\mathscr{B}}
 
 	\DeclareMathOperator\metricOP{d}
-	\NewDocumentCommand\metric{ggg}{%
+	\NewDocumentCommand\metric{ooo}{%
 	\IfNoValueOrEmptyTF{#1}{
 	\IfNoValueOrEmptyTF{#3}{\metricOP}{\metricOP_{#3}}
 	}{
@@ -107,7 +107,7 @@
 
 	% covariance function
 	\DeclareMathOperator{\covOP}{cov}
-	\NewDocumentCommand\cov{gg}{%
+	\NewDocumentCommand\cov{oo}{%
 	\IfNoValueOrEmptyTF{#1}{
 	\IfNoValueOrEmptyTF{#2}{\covOP}{\covOP\left[#2\,,#2\right]}
 	}{
@@ -117,7 +117,7 @@
 
 	% correlation function
 	\DeclareMathOperator{\corrOP}{corr}
-	\NewDocumentCommand\corr{gg}{%
+	\NewDocumentCommand\corr{oo}{%
 	\IfNoValueOrEmptyTF{#1}{
 	\IfNoValueOrEmptyTF{#2}{\corrOP}{\corrOP\left[#2\,,#2\right]}
 	}{
@@ -127,14 +127,14 @@
 
 	% variance function
 	\DeclareMathOperator{\varOP}{var}
-	\NewDocumentCommand\var{g}{\varOP\IfNoValueOrEmptyTF{#1}{}{\left[#1\right]}}
+	\NewDocumentCommand\var{o}{\varOP\IfNoValueOrEmptyTF{#1}{}{\left[#1\right]}}
 
 	% standard deviation
 	\DeclareMathOperator{\sdOP}{sd}
-	\NewDocumentCommand\sd{g}{\sdOP\IfNoValueOrEmptyTF{#1}{}{\left[#1\right]}}
+	\NewDocumentCommand\sd{o}{\sdOP\IfNoValueOrEmptyTF{#1}{}{\left[#1\right]}}
 
 	% probability
-	\NewDocumentCommand\Prob{gg}{%
+	\NewDocumentCommand\Prob{oo}{%
 	\IfNoValueOrEmptyTF{#1}{
 	\IfNoValueOrEmptyTF{#2}{\mathbb{P}}{\mathbb{P}_{#2}}
 	}{
@@ -143,7 +143,7 @@
 	}
 
 	% expectation
-	\NewDocumentCommand\Exp{gg}{%
+	\NewDocumentCommand\Exp{oo}{%
 	\IfNoValueOrEmptyTF{#1}{
 	\IfNoValueOrEmptyTF{#2}{\mathbb{E}}{\mathbb{E}_{#2}}
 	}{
@@ -153,7 +153,7 @@
 
 	% median
 	\DeclareMathOperator{\medOP}{med}
-	\NewDocumentCommand\median{g}{%
+	\NewDocumentCommand\median{o}{%
 	\IfNoValueOrEmptyTF{#1}{\medOP
 	}{
 	\medOP\left[#1\right]
@@ -173,20 +173,20 @@
 
 
 	% norm (the second argument is optional)
-	\NewDocumentCommand\norm{gg}{%
-	\IfNoValueOrEmptyTF{#2}{\left\Vert #1 \right\Vert}
-	{\left\Vert #1 \right\Vert_{#2}}
+	\NewDocumentCommand\norm{O{}m}{%
+	\IfNoValueOrEmptyTF{#1}{\left\Vert #2 \right\Vert}
+	{\left\Vert #2 \right\Vert_{#1}}
 	}
 
 	% indicator (the second argument is optional) %\newcommand{\ind}[1]{\mathds{1}_{#1}}
-	\NewDocumentCommand\ind{gg}{%
-	\IfNoValueOrEmptyTF{#2}{\mathds{1}_{#1}}
-	{\mathds{1}_{#1}\left(#2\right)}
+	\NewDocumentCommand\ind{O{}m}{%
+	\IfNoValueOrEmptyTF{#1}{\mathds{1}_{#2}}
+	{\mathds{1}_{#2}\left(#1\right)}
 	}
 
 	% volume of set
 	\DeclareMathOperator{\volOP}{vol} 
-	\NewDocumentCommand\vol{g}{%
+	\NewDocumentCommand\vol{o}{%
 	\IfNoValueOrEmptyTF{#1}{\volOP}
 	{\volOP\left(#1\right)}
 	}
@@ -209,14 +209,14 @@
 
 	% imaginary part function
 	\DeclareMathOperator{\imOP}{Im} %\DeclareMathOperator{\imOP}{\operatorname{\mathfrak{Im}}}
-	\NewDocumentCommand\im{g}{%
+	\NewDocumentCommand\im{o}{%
 	\IfNoValueOrEmptyTF{#1}{\imOP}
 	{\imOP\left(#1\right)}
 	}
 
 	% real part function
 	\DeclareMathOperator{\reOP}{Re} %\DeclareMathOperator{\reOP}{\operatorname{\mathfrak{Re}}}
-	\NewDocumentCommand\re{g}{%
+	\NewDocumentCommand\re{o}{%
 	\IfNoValueOrEmptyTF{#1}{\reOP}
 	{\reOP\left(#1\right)}
 	}

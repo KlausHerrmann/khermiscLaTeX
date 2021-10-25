@@ -79,6 +79,7 @@ Calligraphic symbols follow the pattern \verb!\cal+LETTER!.
 
 
 \subsection*{Symbols in option \emph{laws}}
+Symbols for probability laws follow a R type syntax \verb!\l+NAME!.
 \begin{longtable}{lll}
 Symbol &amp; Name &amp; Definition\\
 <xsl:for-each select="KHSymbolList/laws/symbol">$<xsl:value-of select="@formula"/>$ &amp; <xsl:value-of select="@eng"/> &amp; \verb%<xsl:value-of select="@formula"/>%\\</xsl:for-each>

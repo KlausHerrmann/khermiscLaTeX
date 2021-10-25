@@ -178,27 +178,27 @@
 	<symbol formula="\LandauP" eng="big O in probability" fra="" index="FALSE"/>
 
 	<symbol formula="\cov" eng="covariance operator" fra="" index="FALSE"/>
-	<symbol formula="\cov{X}" eng="covariance of $X$" fra="" index="FALSE"/>
-	<symbol formula="\cov{X}{Y}" eng="covariance of $X$ and $Y$" fra="" index="FALSE"/>
+	<symbol formula="\cov[X]" eng="covariance of $X$" fra="" index="FALSE"/>
+	<symbol formula="\cov[X][Y]" eng="covariance of $X$ and $Y$" fra="" index="FALSE"/>
 	<symbol formula="\corr" eng="correlation operator" fra="" index="FALSE"/>
-	<symbol formula="\corr{X}" eng="correlation of $X$" fra="" index="FALSE"/>
-	<symbol formula="\corr{X}{Y}" eng="correlation of $X$ and $Y$" fra="" index="FALSE"/>
+	<symbol formula="\corr[X]" eng="correlation of $X$" fra="" index="FALSE"/>
+	<symbol formula="\corr[X][Y]" eng="correlation of $X$ and $Y$" fra="" index="FALSE"/>
 	<symbol formula="\var" eng="variance operator" fra="" index="FALSE"/>
-	<symbol formula="\var{X}" eng="variance of $X$" fra="" index="FALSE"/>
+	<symbol formula="\var[X]" eng="variance of $X$" fra="" index="FALSE"/>
 	<symbol formula="\sd" eng="standard deviation operator" fra="" index="FALSE"/>
-	<symbol formula="\sd{X}" eng="standard deviation of $X$" fra="" index="FALSE"/>
+	<symbol formula="\sd[X]" eng="standard deviation of $X$" fra="" index="FALSE"/>
 	<symbol formula="\Prob" eng="probability measure" fra="" index="FALSE"/>
-	<symbol formula="\Prob{A}" eng="probability measure of event $A$" fra="" index="FALSE"/>
-	<symbol formula="\Prob{}{X}" eng="probability measure of $X$" fra="" index="FALSE"/>
-	<symbol formula="\Prob{A}{X}" eng="probability measure of $X$ for event $A$" fra="" index="FALSE"/>
+	<symbol formula="\Prob[A]" eng="probability measure of event $A$" fra="" index="FALSE"/>
+	<symbol formula="\Prob[][X]" eng="probability measure of $X$" fra="" index="FALSE"/>
+	<symbol formula="\Prob[A][X]" eng="probability measure of $X$ for event $A$" fra="" index="FALSE"/>
 
 	<symbol formula="\Exp" eng="expectation operator" fra="" index="FALSE"/>
-	<symbol formula="\Exp{X}" eng="expectation of $X$" fra="" index="FALSE"/>
-	<symbol formula="\Exp{}{F}" eng="expectation with respect to $F$" fra="" index="FALSE"/>
-	<symbol formula="\Exp{X}{F}" eng="expectation of $X$ with respect to $F$" fra="" index="FALSE"/>
+	<symbol formula="\Exp[X]" eng="expectation of $X$" fra="" index="FALSE"/>
+	<symbol formula="\Exp[][F]" eng="expectation with respect to $F$" fra="" index="FALSE"/>
+	<symbol formula="\Exp[X][F]" eng="expectation of $X$ with respect to $F$" fra="" index="FALSE"/>
 
 	<symbol formula="\median" eng="median operator" fra="" index="FALSE"/>
-	<symbol formula="\median{X}" eng="median of $X$" fra="" index="FALSE"/>
+	<symbol formula="\median[X]" eng="median of $X$" fra="" index="FALSE"/>
 
 
 
@@ -245,19 +245,19 @@
 	<symbol formula="\Borel(\R)" eng="Borel sigma algebra" fra="tribu Borellienne sur $\R$" index="TRUE"/>
 	<symbol formula="\leb" eng="Lebesgue measure" fra="mesure du Lebesgue" index="TRUE"/>
 	<symbol formula="\pfm{\mu}{f}" eng="push forward measure of $\mu$ under $f$" fra="" index="FALSE"/>
-	<symbol formula="\metric{}{}{}" eng="metric symbol" fra="" index="FALSE"/>
-	<symbol formula="\metric{}{}{X}" eng="metric on $X$" fra="metrique sur $A$" index="TRUE"/>
-	<symbol formula="\metric{x}{y}{X}" eng="metric on $X$ of $x$ and $y$" fra="" index="FALSE"/>
-	<symbol formula="\metric{x}{y}" eng="metric of $x$ and $y$" fra="" index="FALSE"/>
+	<symbol formula="\metric" eng="metric symbol" fra="" index="FALSE"/>
+	<symbol formula="\metric[][][X]" eng="metric on $X$" fra="metrique sur $A$" index="TRUE"/>
+	<symbol formula="\metric[x][y][X]" eng="metric on $X$ of $x$ and $y$" fra="" index="FALSE"/>
+	<symbol formula="\metric[x][y]" eng="metric of $x$ and $y$" fra="" index="FALSE"/>
 </measure>
 
 <!-- COMPLEX NUMBERS  -->
 <complex>
 	<symbol formula="\iu" eng="imaginary unit" fra="" index="FALSE"/>
 	<symbol formula="\re" eng="real part of imaginary number" fra="" index="FALSE"/>
-	<symbol formula="\re{z}" eng="real part of imaginary number $z$" fra="" index="FALSE"/>
+	<symbol formula="\re[z]" eng="real part of imaginary number $z$" fra="" index="FALSE"/>
 	<symbol formula="\im" eng="imaginary part of imaginary number" fra="" index="FALSE"/>
-	<symbol formula="\im{z}" eng="imaginary part of imaginary number $z$" fra="" index="FALSE"/>
+	<symbol formula="\im[z]" eng="imaginary part of imaginary number $z$" fra="" index="FALSE"/>
 </complex>
 
 <!-- REAL ANALYSIS  -->
@@ -268,11 +268,11 @@
 	<symbol formula="\abs{x}" eng="absolute value of $x$" fra="" index="FALSE"/>
 	<symbol formula="\d" eng="straight differential for integrals and derivatives" fra="" index="FALSE"/>
 	<symbol formula="\norm{x}" eng="norm of $x$" fra="" index="FALSE"/>
-	<symbol formula="\norm{x}{L^2}" eng="norm of $x$ with subscript" fra="" index="FALSE"/>
+	<symbol formula="\norm[L^2]{x}" eng="norm of $x$ with subscript" fra="" index="FALSE"/>
 	<symbol formula="\vol" eng="volume operator" fra="" index="FALSE"/>
-	<symbol formula="\vol{A}" eng="volume of $A$" fra="" index="FALSE"/>
+	<symbol formula="\vol[A]" eng="volume of $A$" fra="" index="FALSE"/>
 	<symbol formula="\ind{A}" eng="indicator function of set $A$" fra="" index="FALSE"/>
-	<symbol formula="\ind{A}{x}" eng="indicator function of $A$ evaluated at $x\in\R$" fra="" index="FALSE"/>
+	<symbol formula="\ind[x]{A}" eng="indicator function of $A$ evaluated at $x\in\R$" fra="" index="FALSE"/>
 	<symbol formula="\floor{x}" eng="largest integer smaller than $x$" fra="" index="FALSE"/>
 	<symbol formula="\ceil{x}" eng="smallest integer larger than $x$" fra="" index="FALSE"/>
 	<symbol formula="\sinc" eng="$\sinc$ function $\sinc(x)=\sin(x)/x$" fra="" index="FALSE"/>

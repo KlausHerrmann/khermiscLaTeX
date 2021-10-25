@@ -15,9 +15,9 @@ For example, considering the probability of an event there are a number of frequ
 
 Using the package we can typeset those options with optional/empty arguments as follows:
 1. `\Prob`: ℙ,
-1. `\Prob{A}`: ℙ(A),
-1. `\Prob{}{X}`: ℙ<sub>X</sub>, and
-1. `\Prob{B}{X}`: ℙ<sub>X</sub>(B).
+1. `\Prob[A]`: ℙ(A),
+1. `\Prob[][X]`: ℙ<sub>X</sub>, and
+1. `\Prob[B][X]`: ℙ<sub>X</sub>(B).
 
 In the same manner the package implements a number of frequently used functions/operators such as norms, expectation, variance, covariance, standard deviation, etc.
 See <a href="LatexDefinitionTable.pdf">LatexDefinitionTable.pdf</a> for a full list of symbols and their respective LaTeX commands by categories (see Package options).
