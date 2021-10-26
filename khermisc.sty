@@ -1,5 +1,27 @@
-
-%https://tex.stackexchange.com/questions/1137/where-do-i-place-my-own-sty-or-cls-files-to-make-them-available-to-all-my-te
+%This is free and unencumbered software released into the public domain.
+%
+%Anyone is free to copy, modify, publish, use, compile, sell, or
+%distribute this software, either in source code form or as a compiled
+%binary, for any purpose, commercial or non-commercial, and by any
+%means.
+%
+%In jurisdictions that recognize copyright laws, the author or authors
+%of this software dedicate any and all copyright interest in the
+%software to the public domain. We make this dedication for the benefit
+%of the public at large and to the detriment of our heirs and
+%successors. We intend this dedication to be an overt act of
+%relinquishment in perpetuity of all present and future rights to this
+%software under copyright law.
+%
+%THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+%EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+%MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+%IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+%OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+%ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+%OTHER DEALINGS IN THE SOFTWARE.
+%
+%For more information, please refer to <http://unlicense.org/>
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{khermisc}[2021/10/16 khermisc package]
@@ -10,22 +32,15 @@
 \RequirePackage{calligra}
 \RequirePackage{mathrsfs} %for mathscr italics (Dynkin system etc)
 \RequirePackage{dsfont} %for the indicator function
-
-%https://tex.stackexchange.com/questions/13641/define-same-command-with-different-amount-of-parameters
-%https://tex.stackexchange.com/questions/63223/xparse-empty-arguments/63233#63233
 \RequirePackage{xparse}
 
-%This allows to use optional arguments in latex \def type definitions
 \ExplSyntaxOn
-\DeclareExpandableDocumentCommand{\IfNoValueOrEmptyTF}{mmm}
- {
-  \IfNoValueTF{#1}{#2}
-   {
-    \tl_if_empty:nTF {#1} {#2} {#3}
-   }
- }
+\DeclareExpandableDocumentCommand{\IfEmptyOrNoValueTF}{mmm}{
+	\IfNoValueTF{#1}{#2}{
+		\tl_if_empty:nTF {#1} {#2} {#3}
+	}
+}
 \ExplSyntaxOff
-
 
 %definition signs := and =:
 %\newcommand{\rdef}{\mathrel{\resizebox{\widthof{$\mathord{=}$}}{\height}{ $\!\!=\!\!\resizebox{1.2\width}{0.8\height}{\raisebox{0.23ex}{$\mathop{:}$}}\!\!$ }}}
@@ -67,10 +82,10 @@
 
 	\DeclareMathOperator\metricOP{d}
 	\NewDocumentCommand\metric{ooo}{%
-	\IfNoValueOrEmptyTF{#1}{
-	\IfNoValueOrEmptyTF{#3}{\metricOP}{\metricOP_{#3}}
+	\IfEmptyOrNoValueTF{#1}{
+	\IfEmptyOrNoValueTF{#3}{\metricOP}{\metricOP_{#3}}
 	}{
-	\IfNoValueOrEmptyTF{#3}{\metricOP\left(#1,\,#2\right)}{\metricOP_{#3}\left(#1,\,#2\right)}
+	\IfEmptyOrNoValueTF{#3}{\metricOP\left(#1,\,#2\right)}{\metricOP_{#3}\left(#1,\,#2\right)}
 	}
 	}
 
@@ -83,7 +98,6 @@
 
 	% Probability
 
-	% independence symbol: https://tex.stackexchange.com/questions/79434/double-perpendicular-symbol-for-independence
 	\newcommand{\indep}{{\perp\!\!\!\perp}}
 
 	\def\PSpace{\Omega}
@@ -108,53 +122,53 @@
 	% covariance function
 	\DeclareMathOperator{\covOP}{cov}
 	\NewDocumentCommand\cov{oo}{%
-	\IfNoValueOrEmptyTF{#1}{
-	\IfNoValueOrEmptyTF{#2}{\covOP}{\covOP\left[#2\,,#2\right]}
+	\IfEmptyOrNoValueTF{#1}{
+	\IfEmptyOrNoValueTF{#2}{\covOP}{\covOP\left[#2\,,#2\right]}
 	}{
-	\IfNoValueOrEmptyTF{#2}{\covOP\left[#1\,,#1\right]}{\covOP\left[#1\,,#2\right]}
+	\IfEmptyOrNoValueTF{#2}{\covOP\left[#1\,,#1\right]}{\covOP\left[#1\,,#2\right]}
 	}
 	}
 
 	% correlation function
 	\DeclareMathOperator{\corrOP}{corr}
 	\NewDocumentCommand\corr{oo}{%
-	\IfNoValueOrEmptyTF{#1}{
-	\IfNoValueOrEmptyTF{#2}{\corrOP}{\corrOP\left[#2\,,#2\right]}
+	\IfEmptyOrNoValueTF{#1}{
+	\IfEmptyOrNoValueTF{#2}{\corrOP}{\corrOP\left[#2\,,#2\right]}
 	}{
-	\IfNoValueOrEmptyTF{#2}{\corrOP\left[#1\,,#1\right]}{\corrOP\left[#1\,,#2\right]}
+	\IfEmptyOrNoValueTF{#2}{\corrOP\left[#1\,,#1\right]}{\corrOP\left[#1\,,#2\right]}
 	}
 	}
 
 	% variance function
 	\DeclareMathOperator{\varOP}{var}
-	\NewDocumentCommand\var{o}{\varOP\IfNoValueOrEmptyTF{#1}{}{\left[#1\right]}}
+	\NewDocumentCommand\var{o}{\varOP\IfEmptyOrNoValueTF{#1}{}{\left[#1\right]}}
 
 	% standard deviation
 	\DeclareMathOperator{\sdOP}{sd}
-	\NewDocumentCommand\sd{o}{\sdOP\IfNoValueOrEmptyTF{#1}{}{\left[#1\right]}}
+	\NewDocumentCommand\sd{o}{\sdOP\IfEmptyOrNoValueTF{#1}{}{\left[#1\right]}}
 
 	% probability
 	\NewDocumentCommand\Prob{oo}{%
-	\IfNoValueOrEmptyTF{#1}{
-	\IfNoValueOrEmptyTF{#2}{\mathbb{P}}{\mathbb{P}_{#2}}
+	\IfEmptyOrNoValueTF{#1}{
+	\IfEmptyOrNoValueTF{#2}{\mathbb{P}}{\mathbb{P}_{#2}}
 	}{
-	\IfNoValueOrEmptyTF{#2}{\mathbb{P}\left(#1\right)}{\mathbb{P}_{#2}\left(#1\right)}
+	\IfEmptyOrNoValueTF{#2}{\mathbb{P}\left(#1\right)}{\mathbb{P}_{#2}\left(#1\right)}
 	}
 	}
 
 	% expectation
 	\NewDocumentCommand\Exp{oo}{%
-	\IfNoValueOrEmptyTF{#1}{
-	\IfNoValueOrEmptyTF{#2}{\mathbb{E}}{\mathbb{E}_{#2}}
+	\IfEmptyOrNoValueTF{#1}{
+	\IfEmptyOrNoValueTF{#2}{\mathbb{E}}{\mathbb{E}_{#2}}
 	}{
-	\IfNoValueOrEmptyTF{#2}{\mathbb{E}\left[#1\right]}{\mathbb{E}_{#2}\left[#1\right]}
+	\IfEmptyOrNoValueTF{#2}{\mathbb{E}\left[#1\right]}{\mathbb{E}_{#2}\left[#1\right]}
 	}
 	}
 
 	% median
 	\DeclareMathOperator{\medOP}{med}
 	\NewDocumentCommand\median{o}{%
-	\IfNoValueOrEmptyTF{#1}{\medOP
+	\IfEmptyOrNoValueTF{#1}{\medOP
 	}{
 	\medOP\left[#1\right]
 	}}
@@ -174,24 +188,23 @@
 
 	% norm (the second argument is optional)
 	\NewDocumentCommand\norm{O{}m}{%
-	\IfNoValueOrEmptyTF{#1}{\left\Vert #2 \right\Vert}
+	\IfEmptyOrNoValueTF{#1}{\left\Vert #2 \right\Vert}
 	{\left\Vert #2 \right\Vert_{#1}}
 	}
 
 	% indicator (the second argument is optional) %\newcommand{\ind}[1]{\mathds{1}_{#1}}
 	\NewDocumentCommand\ind{O{}m}{%
-	\IfNoValueOrEmptyTF{#1}{\mathds{1}_{#2}}
+	\IfEmptyOrNoValueTF{#1}{\mathds{1}_{#2}}
 	{\mathds{1}_{#2}\left(#1\right)}
 	}
 
 	% volume of set
 	\DeclareMathOperator{\volOP}{vol} 
 	\NewDocumentCommand\vol{o}{%
-	\IfNoValueOrEmptyTF{#1}{\volOP}
+	\IfEmptyOrNoValueTF{#1}{\volOP}
 	{\volOP\left(#1\right)}
 	}
 
-	%https://tex.stackexchange.com/questions/118173/how-to-write-ceil-and-floor-in-latex
 	\newcommand{\floor}[1]{\lfloor #1 \rfloor}
 	\newcommand{\ceil}[1]{\lceil #1 \rceil}
 
@@ -210,14 +223,14 @@
 	% imaginary part function
 	\DeclareMathOperator{\imOP}{Im} %\DeclareMathOperator{\imOP}{\operatorname{\mathfrak{Im}}}
 	\NewDocumentCommand\im{o}{%
-	\IfNoValueOrEmptyTF{#1}{\imOP}
+	\IfEmptyOrNoValueTF{#1}{\imOP}
 	{\imOP\left(#1\right)}
 	}
 
 	% real part function
 	\DeclareMathOperator{\reOP}{Re} %\DeclareMathOperator{\reOP}{\operatorname{\mathfrak{Re}}}
 	\NewDocumentCommand\re{o}{%
-	\IfNoValueOrEmptyTF{#1}{\reOP}
+	\IfEmptyOrNoValueTF{#1}{\reOP}
 	{\reOP\left(#1\right)}
 	}
 
@@ -327,7 +340,6 @@
 }
 
 %nice letters but too big (but for lower case letters this works but mathcal does not) => use for lower case letters only
-%https://tex.stackexchange.com/questions/131656/how-to-typeset-this-symbol-with-mathcal
 \DeclareOption{cal}{
 
 	\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
