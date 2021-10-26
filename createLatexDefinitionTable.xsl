@@ -17,9 +17,17 @@ invited talk yes/no
 \usepackage{longtable}
 \usepackage[laws,sets,measure,complex,real,prob,bold,cal]{khermisc}
 \begin{document}
+\author{Klaus Herrmann}
+\title{Documentation: \emph{khermisc.sty}}
+\maketitle
 \section*{Symbols defined in \emph{khermisc}}
+The defined symbols are grouped by different areas of mathematics (as far as such a grouping is possible) and can be made available by enabling the options of the package.
+This allows to only import the definitions and commands that are needed for a specific project.
+The overloaded syntax is made possible by using \verb+\NewDocumentCommand+ of the \emph{xparse} package, and as such optional parameters for the commands are in square brackets and come before the mandatory parameters in curly brackets.
+For exampe, in case of the indicator function it is mandatory to supply a set as an argument, while an evaluation point is optional.
+The usage is therefore \verb+\ind{A}+ for the function $\ind{A}$, while \verb+\ind[x]{A}+ adds the evaluation point $\ind[x]{A}$.
 
-\subsection*{General symbols}
+\subsection*{General symbols - available by default}
 \begin{longtable}{lll}
 \textbf{Symbol} &amp; \textbf{Name} &amp; \textbf{Definition}\\
 <xsl:for-each select="KHSymbolList/general/symbol">$<xsl:value-of select="@formula"/>$ &amp; <xsl:value-of select="@eng"/> &amp; \verb%<xsl:value-of select="@formula"/>%\\</xsl:for-each>
@@ -79,7 +87,7 @@ Calligraphic symbols follow the pattern \verb!\cal+LETTER!.
 
 
 \subsection*{Symbols in option \emph{laws}}
-Symbols for probability laws follow a R type syntax \verb!\l+NAME!.
+Symbols for probability laws follow a \textbf{\textsf{R}} type syntax \verb!\l+NAME!.
 \begin{longtable}{lll}
 Symbol &amp; Name &amp; Definition\\
 <xsl:for-each select="KHSymbolList/laws/symbol">$<xsl:value-of select="@formula"/>$ &amp; <xsl:value-of select="@eng"/> &amp; \verb%<xsl:value-of select="@formula"/>%\\</xsl:for-each>
