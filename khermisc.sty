@@ -69,7 +69,8 @@
 	\def\Q{\mathbb{Q}}
 	\def\R{\mathbb{R}}
 	\def\Rbar{\overline{\R}}
-	\def\C{\mathbb{C}}
+	\def\CN{\mathbb{C}} %\C might lead to a clash with the hyperref package ...
+	\def\C{\mathbb{C}} % legacy definition
 	\def\PowerSet{\mathcal{P}}
 }
 
@@ -91,6 +92,12 @@
 
 	\def\leb{\lambda}
 	\newcommand{\pfm}[2]{#2_{\sharp}#1} %push forward measure
+
+	\def\eqae{\stackrel{a.e.}{=}}
+	\def\neqae{\stackrel{a.e.}{\not=}}
+	\def\ae{\xrightarrow{a.e.}}
+
+
 
 }
 
@@ -183,7 +190,16 @@
 	\DeclareMathOperator*{\argmax}{argmax}
 	\newcommand{\abs}[1]{\left\vert #1 \right\vert}
 	%\newcommand{\xNorm}[2]{\left\Vert #1 \right\Vert_{#2}}
-	\def\d{\,\mathrm{d}} % d for integrals
+	\def\d{\,\mathrm{d}} % d for integrals \d can lead to a clash with other definitions
+
+
+	% correct differential operator https://tex.stackexchange.com/questions/60545/should-i-mathrm-the-d-in-my-integrals
+	\NewDocumentCommand\diff{o}{%
+	\IfEmptyOrNoValueTF{#1}{\mathop{}\!\mathrm{d}}
+	{\mathop{}\!\mathrm{d^#1}}
+	}
+
+
 
 
 	% norm (the second argument is optional)

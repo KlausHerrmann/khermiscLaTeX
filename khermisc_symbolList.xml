@@ -235,6 +235,7 @@
 	<symbol formula="\R" eng="real numbers" fra="nombres réels" index="TRUE"/>
 	<symbol formula="\Rbar" eng="extended real numbers" fra="nombres réels" index="FALSE"/>
 	<symbol formula="\C" eng="complex numbers" fra="nombres complexes" index="FALSE"/>
+	<symbol formula="\CN" eng="complex numbers (in case backslash C is already defined)" fra="nombres complexes" index="FALSE"/>
 	<symbol formula="\PowerSet(E)" eng="power set of $E$" fra="ensemble des parties de $E$" index="TRUE"/>
 </sets>
 
@@ -249,7 +250,14 @@
 	<symbol formula="\metric[][][X]" eng="metric on $X$" fra="metrique sur $A$" index="TRUE"/>
 	<symbol formula="\metric[x][y][X]" eng="metric on $X$ of $x$ and $y$" fra="" index="FALSE"/>
 	<symbol formula="\metric[x][y]" eng="metric of $x$ and $y$" fra="" index="FALSE"/>
+
+	<symbol formula="f_n \ae f" eng="$f_n$ converges to $f$ almost everywhere" fra="" index="FALSE"/>
+	<symbol formula="f \eqae g" eng="$f$ is equal to $g$ almost everywhere" fra="" index="FALSE"/>
+	<symbol formula="f \neqae g" eng="$f$ is not equal to $g$ almost everywhere" fra="" index="FALSE"/>
+
+
 </measure>
+
 
 <!-- COMPLEX NUMBERS  -->
 <complex>
@@ -266,7 +274,9 @@
 	<symbol formula="\argmin" eng="arg min" fra="" index="FALSE"/>
 	<symbol formula="\argmax" eng="arg max" fra="" index="FALSE"/>
 	<symbol formula="\abs{x}" eng="absolute value of $x$" fra="" index="FALSE"/>
-	<symbol formula="\d" eng="straight differential for integrals and derivatives" fra="" index="FALSE"/>
+	<symbol formula="\d" eng="straight differential for integrals and derivatives (depreciated)" fra="" index="FALSE"/>
+	<symbol formula="\diff" eng="straight differential for integrals and derivatives" fra="" index="FALSE"/>
+	<symbol formula="\diff[2]" eng="straight differential with power for integrals and derivatives" fra="" index="FALSE"/>
 	<symbol formula="\norm{x}" eng="norm of $x$" fra="" index="FALSE"/>
 	<symbol formula="\norm[L^2]{x}" eng="norm of $x$ with subscript" fra="" index="FALSE"/>
 	<symbol formula="\vol" eng="volume operator" fra="" index="FALSE"/>
