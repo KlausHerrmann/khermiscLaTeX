@@ -251,7 +251,7 @@
 	<symbol formula="\metric[x][y][X]" eng="metric on $X$ of $x$ and $y$" fra="" index="FALSE"/>
 	<symbol formula="\metric[x][y]" eng="metric of $x$ and $y$" fra="" index="FALSE"/>
 
-	<symbol formula="f_n \ae f" eng="$f_n$ converges to $f$ almost everywhere" fra="" index="FALSE"/>
+	<symbol formula="f_n \cae f" eng="$f_n$ converges to $f$ almost everywhere" fra="" index="FALSE"/>
 	<symbol formula="f \eqae g" eng="$f$ is equal to $g$ almost everywhere" fra="" index="FALSE"/>
 	<symbol formula="f \neqae g" eng="$f$ is not equal to $g$ almost everywhere" fra="" index="FALSE"/>
 
