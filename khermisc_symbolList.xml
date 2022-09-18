@@ -225,6 +225,15 @@
 	<symbol formula="\lexp" eng="law of the exponential distribution" fra="loi exponentielle" index="TRUE"/>
 	<symbol formula="\lber" eng="law of the Bernoulli distribution" fra="loi Bernoulli" index="TRUE"/>
 	<symbol formula="\lt" eng="law of the student t distribution" fra="loi student t" index="TRUE"/>
+
+
+<symbol formula="\lgamma" eng="law of the gamma distribution" fra="loi gamma" index="TRUE"/>
+<symbol formula="\lbeta" eng="law of the beta distribution" fra="loi bêta" index="TRUE"/>
+<symbol formula="\lcauchy" eng="law of the Cauchy distribution" fra="loi de Cauchy" index="TRUE"/>
+<symbol formula="\lgeom" eng="law of the geometric distribution" fra="loi géométrique" index="TRUE"/>
+<symbol formula="\lchisq" eng="law of the chi-square distribution" fra="loi khi carrée" index="TRUE"/>
+
+
 </laws>
 
 <!-- SETS -->
@@ -251,9 +260,12 @@
 	<symbol formula="\metric[x][y][X]" eng="metric on $X$ of $x$ and $y$" fra="" index="FALSE"/>
 	<symbol formula="\metric[x][y]" eng="metric of $x$ and $y$" fra="" index="FALSE"/>
 
-	<symbol formula="f_n \cae f" eng="$f_n$ converges to $f$ almost everywhere" fra="" index="FALSE"/>
+	<symbol formula="f_n \cae f" eng="$f_n$ converges to $f$ almost everywhere" fra="" index="false"/>
+	<symbol formula="f_n \cae[\mu] f" eng="$f_n$ converges to $f$ almost everywhere w.r.t. $\mu$" fra="" index="false"/>
 	<symbol formula="f \eqae g" eng="$f$ is equal to $g$ almost everywhere" fra="" index="FALSE"/>
+	<symbol formula="f \eqae[\mu] g" eng="$f$ is equal to $g$ almost everywhere w.r.t. $\mu$" fra="" index="FALSE"/>
 	<symbol formula="f \neqae g" eng="$f$ is not equal to $g$ almost everywhere" fra="" index="FALSE"/>
+	<symbol formula="f \neqae[\mu] g" eng="$f$ is not equal to $g$ almost everywhere w.r.t. $\mu$" fra="" index="FALSE"/>
 
 
 </measure>

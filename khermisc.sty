@@ -59,6 +59,11 @@
 	\DeclareMathOperator\lexp{Exp}
 	\DeclareMathOperator\lber{Ber}
 	\DeclareMathOperator\lt{t}
+	\DeclareMathOperator\lgamma{Gamma}
+	\DeclareMathOperator\lbeta{Beta}
+	\DeclareMathOperator\lcauchy{Cauchy}
+	\DeclareMathOperator\lgeom{Geom}
+	\def\lchisq{\chi^2}
 
 }
 
@@ -93,9 +98,14 @@
 	\def\leb{\lambda}
 	\newcommand{\pfm}[2]{#2_{\sharp}#1} %push forward measure
 
-	\def\eqae{\stackrel{a.e.}{=}}
-	\def\neqae{\stackrel{a.e.}{\not=}}
-	\def\cae{\xrightarrow{a.e.}}
+	%\def\eqae{\stackrel{a.e.}{=}}
+	%\def\neqae{\stackrel{a.e.}{\not=}}
+	%\def\cae{\xrightarrow{a.e.}}
+
+	\NewDocumentCommand\cae{o}{\IfEmptyOrNoValueTF{#1}{\xrightarrow{a.e.}}{\xrightarrow{#1\ a.e.}}}
+
+	\NewDocumentCommand\eqae{o}{\IfEmptyOrNoValueTF{#1}{\stackrel{a.e.}{=}}{\stackrel{#1\ a.e.}{=}}}
+	\NewDocumentCommand\neqae{o}{\IfEmptyOrNoValueTF{#1}{\stackrel{a.e.}{\not=}}{\stackrel{#1\ a.e.}{\not=}}}
 
 
 
@@ -185,7 +195,7 @@
 \DeclareOption{real}{
 
 	% ANALYSIS
-	\DeclareMathOperator\e{e} 
+	\def\e{\mathrm{e}}
 	\DeclareMathOperator*{\argmin}{argmin}
 	\DeclareMathOperator*{\argmax}{argmax}
 	\newcommand{\abs}[1]{\left\vert #1 \right\vert}
