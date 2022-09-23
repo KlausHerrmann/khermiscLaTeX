@@ -250,6 +250,8 @@
 
 <!-- MEASURE THEORY  -->
 <measure>
+	<symbol formula="\esup" eng="essential supremum" fra="" index="FALSE"/>
+	<symbol formula="\einf" eng="essential infimum" fra="" index="FALSE"/>
 	<symbol formula="\Dynkin" eng="Dynkin system" fra="systeme Dynkin" index="FALSE"/>
 	<symbol formula="\Topology" eng="topology" fra="topologie" index="FALSE"/>
 	<symbol formula="\Borel(\R)" eng="Borel sigma algebra" fra="tribu Borellienne sur $\R$" index="TRUE"/>
