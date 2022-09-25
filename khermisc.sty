@@ -210,7 +210,13 @@
 	{\mathop{}\!\mathrm{d^#1}}
 	}
 
-
+	\NewDocumentCommand\sprod{ooo}{%
+	\IfEmptyOrNoValueTF{#1}{
+	\IfEmptyOrNoValueTF{#3}{\langle\, ,\,\rangle}{\langle\, ,\,\rangle_{#3}}
+	}{
+	\IfEmptyOrNoValueTF{#3}{\left\langle #1,\,#2\right\rangle}{\left\langle #1,\,#2\right\rangle_{#3}}
+	}
+	}
 
 
 	% norm (the second argument is optional)

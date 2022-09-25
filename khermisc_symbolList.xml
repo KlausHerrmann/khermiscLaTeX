@@ -302,6 +302,11 @@
 	<symbol formula="\sinc" eng="$\sinc$ function $\sinc(x)=\sin(x)/x$" fra="" index="FALSE"/>
 	<symbol formula="\landau" eng="small o" fra="" index="FALSE"/>
 	<symbol formula="\Landau" eng="big O" fra="" index="FALSE"/>
+	<symbol formula="\sprod" eng="scalar product symbol" fra="" index="FALSE"/>
+	<symbol formula="\sprod[][][X]" eng="scalar product $X$" fra="" index="TRUE"/>
+	<symbol formula="\sprod[x][y][X]" eng="scalar product $X$ of $x$ and $y$" fra="" index="FALSE"/>
+	<symbol formula="\sprod[x][y]" eng="scalar product of $x$ and $y$" fra="" index="FALSE"/>
+
 </real>
 </KHSymbolList>
 
