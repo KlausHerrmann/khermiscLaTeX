@@ -110,6 +110,17 @@
 
 
 
+
+
+	% indicator (the second argument is optional) %\newcommand{\ind}[1]{\mathds{1}_{#1}}
+	\NewDocumentCommand\eqLp{O{}m}{%
+	\IfEmptyOrNoValueTF{#1}{\stackrel{L^{#2}}{=}}
+	{
+\stackrel{L^{#2}(#1)}{=}
+}
+	}
+
+
 }
 
 \DeclareOption{prob}{
