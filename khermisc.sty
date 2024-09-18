@@ -69,14 +69,20 @@
 
 \DeclareOption{sets}{
 	% Sets
-	\def\N{\mathbb{N}}
-	\def\Z{\mathbb{Z}}
-	\def\Q{\mathbb{Q}}
-	\def\R{\mathbb{R}}
-	\def\Rbar{\overline{\R}}
-	\def\CN{\mathbb{C}} %\C might lead to a clash with the hyperref package ...
+	\def\N{\mathbb{N}} % legacy definition
+	\def\Z{\mathbb{Z}} % legacy definition
+	\def\Q{\mathbb{Q}} % legacy definition
+	\def\R{\mathbb{R}} % legacy definition
+	\def\Rbar{\overline{\R}} % legacy definition
 	\def\C{\mathbb{C}} % legacy definition
+
 	\def\PowerSet{\mathcal{P}}
+	\def\CN{\mathbb{C}} %\C might lead to a clash with the hyperref package ...
+    \def\NN{\mathbb{N}}
+	\def\ZN{\mathbb{Z}}
+	\def\QN{\mathbb{Q}}
+	\def\RN{\mathbb{R}}
+	\def\RNbar{\overline{\RN}}
 }
 
 \DeclareOption{measure}{
@@ -212,7 +218,7 @@
 	\DeclareMathOperator*{\argmax}{argmax}
 	\newcommand{\abs}[1]{\left\vert #1 \right\vert}
 	%\newcommand{\xNorm}[2]{\left\Vert #1 \right\Vert_{#2}}
-	\def\d{\,\mathrm{d}} % d for integrals \d can lead to a clash with other definitions
+	\def\d{\,\mathrm{d}} % legacy d for integrals \d can lead to a clash with other definitions
 
 
 	% correct differential operator https://tex.stackexchange.com/questions/60545/should-i-mathrm-the-d-in-my-integrals

@@ -38,6 +38,7 @@ The available symbols are grouped by different subjects.
 Just like any other LaTeX package, the file can be included using `\usepackage{khermisc}` in the preamble with the relevant options in square brackets, for example, `\usepackage[complex]{khermisc}`.
 To use the package the file has to be either in the same directory as the LaTeX file, or in a central location where the `sty` files are stored.
 On Ubuntu-Linux with a standard TeX Live installation the location could, for example, be `/usr/share/texlive/texmf-dist/tex/latex/khermisc/khermisc.sty`.
+Typically it will then also be necessary to let the LaTeX installation know that a new file is available (in case of the standard installation on Ubuntu running `texhash` (proably combined with `sudo`) should do the trick).
 
 ## Includes
 The package loads the following packages via `\RequirePackage`:

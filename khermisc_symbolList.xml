@@ -238,13 +238,12 @@
 
 <!-- SETS -->
 <sets>
-	<symbol formula="\N" eng="natural numbers" fra="nombres naturelles" index="TRUE"/>
-	<symbol formula="\Z" eng="integers" fra="nombres entiers" index="TRUE"/>
-	<symbol formula="\Q" eng="rational numbers" fra="nombres rationelles" index="TRUE"/>
-	<symbol formula="\R" eng="real numbers" fra="nombres réels" index="TRUE"/>
-	<symbol formula="\Rbar" eng="extended real numbers" fra="nombres réels" index="FALSE"/>
-	<symbol formula="\C" eng="complex numbers" fra="nombres complexes" index="FALSE"/>
-	<symbol formula="\CN" eng="complex numbers (in case backslash C is already defined)" fra="nombres complexes" index="FALSE"/>
+	<symbol formula="\NN" eng="natural numbers" fra="nombres naturelles" index="TRUE"/>
+	<symbol formula="\ZN" eng="integers" fra="nombres entiers" index="TRUE"/>
+	<symbol formula="\QN" eng="rational numbers" fra="nombres rationelles" index="TRUE"/>
+	<symbol formula="\RN" eng="real numbers" fra="nombres réels" index="TRUE"/>
+	<symbol formula="\RNbar" eng="extended real numbers" fra="nombres réels" index="FALSE"/>
+	<symbol formula="\CN" eng="complex numbers" fra="nombres complexes" index="FALSE"/>
 	<symbol formula="\PowerSet(E)" eng="power set of $E$" fra="ensemble des parties de $E$" index="TRUE"/>
 </sets>
 
